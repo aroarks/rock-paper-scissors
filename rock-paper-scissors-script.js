@@ -1,13 +1,23 @@
 function getComputerChoice() {
-    let a = Math.floor(Math.random() * 3);
-    if (a === 0) {
-        a = "rock";
-        return a;
-    } else if (a === 1) {
-        a = "paper";
-        return a;
+    const computerChoice = Math.floor(Math.random() * 3);
+    if (computerChoice === 0) {
+        computerChoice = "rock";
+        return computerChoice;
+    } else if (computerChoice === 1) {
+        computerChoice = "paper";
+        return computerChoice;
     } else {
-        a = "scissors";
-        return a;
+        computerChoice = "scissors";
+        return computerChoice;
+    }
+}
+
+function getPlayerChoice() {
+    let playerChoice = prompt("Please choose rock, paper, or scissors: ");
+    playerChoice = playerChoice.toLowerCase()
+    if (playerChoice === ("rock") || ("paper") ||  ("scissors")) {
+        return playerChoice;
+    } else {
+        return "Invalid entry.";
     }
 }
