@@ -34,7 +34,7 @@ function playRound() {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    let victMessage = undefined;
+    let victMessage;
     for (let i = 0; i < 5; i++) {
         let roundResult = playRound();
         if (roundResult === true) {
@@ -45,10 +45,10 @@ function game() {
         }
     }
     if (playerScore > computerScore) {
-        victMessage = "You won. Congratulations!"
+        victMessage = "You won. Congratulations!";
     }
     else {
-        victMessage = "You lost. Too bad!"
+        victMessage = "You lost. Too bad!";
     }
     console.log(`You won ${playerScore} rounds while your opponent won ${computerScore} rounds. ${victMessage}`);
 }
