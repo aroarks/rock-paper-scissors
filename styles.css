@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(25, 25, 50);
+    color: rgb(245, 245, 245);
+    padding: 0;
+    margin: 0;
+    
+}
+
+body * {
+    border: 1px solid red;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ScoreInfo {
+    flex: 1;
+    margin: 10px;
+}
+
+.roundResultInfo {
+    flex: 1;
+    margin: 10px;
+}
+
+.gameButtons {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.gameButton {
+    flex: 1 0 33%;
+    margin: 5px;
+}

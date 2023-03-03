@@ -12,15 +12,17 @@ const getComputerChoice = function() {
 const playRound = function(playerChoice) {
     const computerChoice = getComputerChoice()
     if (playerChoice === computerChoice) {
-        console.log(`you both chose ${playerChoice}. The round is a draw!`);
+        resultInfo.textContent = `You both chose ${playerChoice}. The round is a draw!`;
     }
     else if ((playerChoice === 'rock' && computerChoice === 'scissors') 
     || (playerChoice === 'paper' && computerChoice === 'rock') 
     || (playerChoice === 'scissors' && computerChoice === 'paper')) {
-        console.log(`you chose ${playerChoice} while your opponent chose ${computerChoice}. You win the round!`);
+        resultInfo.textContent = `You chose ${playerChoice} while your opponent chose ${computerChoice}. You win the round!`;
+        playerScore++;
     }
     else {
-        console.log(`you chose ${playerChoice} while your opponent chose ${computerChoice}. You lose the round...`);
+        resultInfo.textContent = `You chose ${playerChoice} while your opponent chose ${computerChoice}. You lose the round...`;
+        computerScore++;
     }
 };
 
@@ -28,5 +30,11 @@ const buttons = gameButtons.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playRound(button.id);
+        scoreInfo.textContent = `Your Score: ${playerScore}   Opponent Score: ${computerScore}`;
     });
 });
+
+const scoreInfo = document.querySelector('#scoreInfo');
+const resultInfo = document.querySelector('#resultInfo');
+let playerScore = 0;
+let computerScore = 0;
