@@ -8,14 +8,20 @@
   </head>
   <body>
     <div class='mainContainer'>
-      <div class='scoreInfo'>
-        <div class='playerScore'>Player Score</div>
-        <div class='opponentScore'>Opponent Score</div>
+      <div class='scoreContainer'>
+        <div class='gameScore'>
+          <div>Player Score</div>
+          <div id='playerScore'>0</div>
+        </div>
+        <div class='gameScore'>
+          <div>Opponent Score</div>
+          <div id='computerScore'>0</div>
+        </div>
       </div>
-      <div class='roundResultInfo'>
-        Round Result
+      <div class='roundReadout'>
+        Please choose rock, paper, or scissors.
       </div>
-      <div class='gameButtons'>
+      <div class='buttonContainer'>
         <button id='rock' class='gameButton'>Rock</button>
         <button id='paper' class='gameButton'>Paper</button>
         <button id='scissors' class='gameButton'>Scissors</button>
