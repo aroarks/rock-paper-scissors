@@ -21,7 +21,7 @@ const playRound = function(playerChoice) {
         playerScore++;
     }
     else {
-        resultInfoDisplay.textContent = `You chose ${playerChoice} while your opponent chose ${computerChoice}. You lose the round.`
+        resultInfoDisplay.textContent = `You chose ${playerChoice} while your opponent chose ${computerChoice}. You lose the round.`;
         computerScore++;
     }
     playerScoreDisplay.textContent = playerScore;
